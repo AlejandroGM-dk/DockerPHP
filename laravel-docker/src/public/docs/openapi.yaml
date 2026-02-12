@@ -1,0 +1,234 @@
+openapi: 3.0.3
+info:
+  title: 'Cars API Documentation'
+  description: 'API REST para la gestión de coches'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+tags:
+  -
+    name: Coches
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'Obten ek token desde la ruta de login.'
+security:
+  -
+    default: []
+paths:
+  /api/añadirCoche:
+    post:
+      summary: ''
+      operationId: postApiAAdirCoche
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Coches
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                marca:
+                  type: string
+                  description: ''
+                  example: consequatur
+                modelo:
+                  type: string
+                  description: ''
+                  example: consequatur
+                autonomia:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - marca
+                - modelo
+                - autonomia
+  '/api/modificarCoche/{id}':
+    put:
+      summary: ''
+      operationId: putApiModificarCocheId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Coches
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the modificarCoche.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  /api/mostrarCoches:
+    get:
+      summary: ''
+      operationId: getApiMostrarCoches
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Coches
+  /api/documentation:
+    get:
+      summary: 'Handles the API request and renders the Swagger documentation view.'
+      operationId: handlesTheAPIRequestAndRendersTheSwaggerDocumentationView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>L5 Swagger UI</title>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"http://localhost/docs/asset/swagger-ui.css?v=295c0e8b75154a3a99d297333d3e9cb9\">\n    <link rel=\"icon\" type=\"image/png\" href=\"http://localhost/docs/asset/favicon-32x32.png?v=40d4f2c38d1cd854ad463f16373cbcb6\" sizes=\"32x32\"/>\n    <link rel=\"icon\" type=\"image/png\" href=\"http://localhost/docs/asset/favicon-16x16.png?v=f0ae831196d55d8f4115b6c5e8ec5384\" sizes=\"16x16\"/>\n    <style>\n    html\n    {\n        box-sizing: border-box;\n        overflow: -moz-scrollbars-vertical;\n        overflow-y: scroll;\n    }\n    *,\n    *:before,\n    *:after\n    {\n        box-sizing: inherit;\n    }\n\n    body {\n      margin:0;\n      background: #fafafa;\n    }\n    </style>\n    </head>\n\n<body >\n<div id=\"swagger-ui\"></div>\n\n<script src=\"http://localhost/docs/asset/swagger-ui-bundle.js?v=3abe734b0cfda5cb259bd02f796042d1\"></script>\n<script src=\"http://localhost/docs/asset/swagger-ui-standalone-preset.js?v=e309748b3af627b5137cb7a559853117\"></script>\n<script>\n    window.onload = function() {\n        const urls = [];\n\n                    urls.push({name: \"L5 Swagger UI\", url: \"http://localhost/docs?api-docs.json\"});\n        \n        // Build a system\n        const ui = SwaggerUIBundle({\n            dom_id: '#swagger-ui',\n            urls: urls,\n            \"urls.primaryName\": \"L5 Swagger UI\",\n            operationsSorter: null,\n            configUrl: null,\n            validatorUrl: null,\n            oauth2RedirectUrl: \"http://localhost/api/oauth2-callback\",\n\n            requestInterceptor: function(request) {\n                request.headers['X-CSRF-TOKEN'] = '';\n                return request;\n            },\n\n            presets: [\n                SwaggerUIBundle.presets.apis,\n                SwaggerUIStandalonePreset\n            ],\n\n            plugins: [\n                SwaggerUIBundle.plugins.DownloadUrl\n            ],\n\n            layout: \"StandaloneLayout\",\n            docExpansion : \"none\",\n            deepLinking: true,\n            filter: true,\n            persistAuthorization: \"false\",\n\n        })\n\n        window.ui = ui\n\n            }\n</script>\n</body>\n</html>\n"
+      tags:
+        - Endpoints
+      security: []
+  /api/oauth2-callback:
+    get:
+      summary: 'Handles the OAuth2 callback and retrieves the required file for the redirect.'
+      operationId: handlesTheOAuth2CallbackAndRetrievesTheRequiredFileForTheRedirect
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!doctype html>\n<html lang=\"en-US\">\n<body>\n<script src=\"oauth2-redirect.js\"></script>\n</body>\n</html>\n"
+      tags:
+        - Endpoints
+      security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: qkunze@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - email
+                - password
+      security: []
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/mensaje:
+    get:
+      summary: ''
+      operationId: getApiMensaje
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/json:
+    get:
+      summary: ''
+      operationId: getApiJson
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []

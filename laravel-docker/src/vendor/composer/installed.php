@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v12.11.2',
-        'version' => '12.11.2.0',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
@@ -33,6 +33,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'darkaonline/l5-swagger' => array(
+            'pretty_version' => '10.1.0',
+            'version' => '10.1.0.0',
+            'reference' => '62582008f851bdcda40d27898a1ec609da9e509c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../darkaonline/l5-swagger',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -92,7 +101,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../fakerphp/faker',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'filp/whoops' => array(
             'pretty_version' => '2.18.4',
@@ -101,7 +110,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../filp/whoops',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'fruitcake/php-cors' => array(
             'pretty_version' => 'v1.4.0',
@@ -382,6 +391,15 @@
                 0 => 'v12.50.0',
             ),
         ),
+        'knuckleswtf/scribe' => array(
+            'pretty_version' => '5.7.0',
+            'version' => '5.7.0.0',
+            'reference' => '81cadf88fca6b78a943af413c3818977c264b591',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../knuckleswtf/scribe',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -398,8 +416,8 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v12.11.2',
-            'version' => '12.11.2.0',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
@@ -441,6 +459,15 @@
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'laravel/sanctum' => array(
+            'pretty_version' => 'v4.3.0',
+            'version' => '4.3.0.0',
+            'reference' => 'c978c82b2b8ab685468a7ca35224497d541b775a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/sanctum',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(
             'pretty_version' => 'v2.0.9',
@@ -541,6 +568,21 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'mpociot/laravel-apidoc-generator' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'mpociot/reflection-docblock' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => 'c8b2e2b1f5cebbb06e2b5ccbf2958f2198867587',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mpociot/reflection-docblock',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'mtdowling/cron-expression' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -599,7 +641,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../nunomaduro/collision',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'nunomaduro/termwind' => array(
             'pretty_version' => 'v2.3.3',
@@ -607,6 +649,15 @@
             'reference' => '6fb2a640ff502caace8e05fd7be3b503a7e1c017',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nunomaduro/termwind',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'parsedown/parsedown' => array(
+            'pretty_version' => '1.7.5',
+            'version' => '1.7.5.0',
+            'reference' => '6ca5690b0282544416897376abe056601847ddb3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../parsedown/parsedown',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -634,6 +685,15 @@
             'reference' => '75365b91986c2405cf5e1e012c5595cd487a98be',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpoption/phpoption',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'phpstan/phpdoc-parser' => array(
+            'pretty_version' => '2.3.2',
+            'version' => '2.3.2.0',
+            'reference' => 'a004701b11273a26cd7955a61d67a7f1e525a45a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpstan/phpdoc-parser',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -821,6 +881,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'radebatz/type-info-extras' => array(
+            'pretty_version' => '1.0.5',
+            'version' => '1.0.5.0',
+            'reference' => '217e249a35dbdbd9537f99de622cc080c3f8fb2c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../radebatz/type-info-extras',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'ralouphie/getallheaders' => array(
             'pretty_version' => '3.0.3',
             'version' => '3.0.3.0',
@@ -989,6 +1058,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'shalvah/upgrader' => array(
+            'pretty_version' => '0.6.0',
+            'version' => '0.6.0.0',
+            'reference' => 'd95ed17fe9f5e1ee7d47ad835595f1af080a867f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../shalvah/upgrader',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'spatie/once' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1003,6 +1081,15 @@
             'install_path' => __DIR__ . '/../staabm/side-effects-detector',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'swagger-api/swagger-ui' => array(
+            'pretty_version' => 'v5.31.0',
+            'version' => '5.31.0.0',
+            'reference' => '61dddd44389bf25922639afd682f50b8a0fb5cf4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../swagger-api/swagger-ui',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/clock' => array(
             'pretty_version' => 'v7.4.0',
@@ -1268,6 +1355,15 @@
                 0 => '2.3|3.0',
             ),
         ),
+        'symfony/type-info' => array(
+            'pretty_version' => 'v7.4.4',
+            'version' => '7.4.4.0',
+            'reference' => 'f83c725e72b39b2704b9d6fc85070ad6ac7a5889',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/type-info',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/uid' => array(
             'pretty_version' => 'v7.4.4',
             'version' => '7.4.4.0',
@@ -1286,6 +1382,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/var-exporter' => array(
+            'pretty_version' => 'v7.4.0',
+            'version' => '7.4.0.0',
+            'reference' => '03a60f169c79a28513a78c967316fbc8bf17816f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-exporter',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/yaml' => array(
             'pretty_version' => 'v7.4.1',
             'version' => '7.4.1.0',
@@ -1293,7 +1398,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.3.1',
@@ -1328,6 +1433,15 @@
             'reference' => 'b1d923f88091c6bf09699efcd7c8a1b1bfd7351d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../voku/portable-ascii',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'zircote/swagger-php' => array(
+            'pretty_version' => '6.0.5',
+            'version' => '6.0.5.0',
+            'reference' => '9a0a612584e7dea0e069b3b1a2120b404f3a51d4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../zircote/swagger-php',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
